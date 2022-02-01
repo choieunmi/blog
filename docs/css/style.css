@@ -1,0 +1,610 @@
+/* 노멀라이징 */
+*{
+    margin: 0 ;
+    padding: 0 ;
+  }
+  ul , li {
+    list-style: none ;
+  }
+  a{
+    color: inherit ;
+    text-decoration: none ;
+  }
+  /* 라이브러리 */
+  .cell{
+    float: left ;
+  }
+  .cell-r{
+    float: right ;
+  }
+  .row::after{
+    clear: both;
+    content: "";
+    display: block;
+  }
+  .con{
+      width: 1740px;
+  }
+  .ma-le{
+    margin-left: 20px;
+  }
+
+  /* 폰트 */
+  @font-face{
+    font-family: "네오" ;
+    src:url(../font/SpoqaHanSansNeo-Light.otf)
+  }
+  
+  @font-face{
+    font-family: "어그로체" ;
+    src:url(../font/SB\ 어그로\ B.ttf)
+  }
+
+  /* 스타일화 */
+  .wrap{
+    width: 1918px;
+    /* 데스크탑> 화면크기 최대 1920> 스크롤 2px해서 총 1915px */
+  }
+  /* left-menu st */
+  .wrap>.left-menu{
+    width: 177px;
+    height: 100%;
+    border-right: 1px solid #eee;
+    position: fixed;
+    background-color:#ffffff;
+    top: 0;
+    z-index: 9999;
+  }
+  .left-menu> .logo-box{
+    width: 177px;
+    height: 60px;
+    position: relative;
+  }
+  .left-menu> .logo-box>img{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+  /* nav-box st */
+  .left-menu>.nav-box>.all{
+    margin-bottom: 50px;
+    margin-top: 30px;
+    font-size: 15px;
+    font-family: "네오";
+    font-weight: bold;
+  }
+  .left-menu>.nav-box>.all>.ham{
+    margin-right: 10px;
+  } 
+  
+  .left-menu>.nav-box>.all>.ham>.bar{
+  display: block;
+  width: 16px;
+  height: 2px;
+  background-color: black;
+  margin-top: 3px;
+  position: relative;
+}   
+.ham>.bar:nth-child(1){
+  top: 0%;
+}
+.ham>.bar:nth-child(2){
+  top: 50%;
+}  
+.ham>.bar:nth-child(3){
+  top: 100%;
+}
+.left-menu>.nav-box>.all>.ham>.bar::after{
+  content: "";
+  display: block;
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  background-color: #E16004;
+}
+.left-menu>.nav-box>.all:hover>.ham>.bar::after{
+  background-color: #E16004 ;
+  width: 100%;
+}
+ .left-menu>.nav-box>.all>.ham>.bar:nth-child(1)::after{
+   transition: 0.1s;
+ }
+ .left-menu>.nav-box>.all>.ham>.bar:nth-child(2)::after{
+  transition: 0.5s;
+}
+.left-menu>.nav-box>.all>.ham>.bar:nth-child(3)::after{
+  transition: 0.8s;
+}
+  .left-menu>.nav-box>.goods{
+    margin-bottom: 68px;
+  }
+  .left-menu>.nav-box>.goods>li
+  {
+    font-size: 18px;
+    margin-bottom: 35px;
+    position: relative;
+    font-family: "네오";
+    font-weight: bold;
+  }
+  .left-menu>.nav-box>.goods>li:hover::after{
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: #E16004 ;
+    height: 23px;
+    width: 4px;
+    top:0%;
+    right:0%;
+  }
+  .left-menu>.nav-box>.event>li{
+    font-size: 15px;
+    font-family: "네오";
+    margin-bottom: 22px;
+  }
+  /* nav-box ed */
+  /* nav-2-wrap st */
+  .wrap>.nav-2-wrap{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    /* position: absolute;
+    겹치기 */
+    position: fixed;
+    z-index: 10000 ;
+    top: 0;
+    margin-left: 178px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .wrap> .nav-2-wrap.active{
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-2-wrap>.nav-left{
+    width: 380px;
+    height: 100%;
+    background-color: sandybrown;
+    position: relative;
+    /* 콘텐츠 겹치기. */
+  }
+  .nav-2-wrap>.nav-left>.content{
+    width: 100%;
+    height: 100%;
+    background-color:#ffffff;
+    padding-top: 158px;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    /* 콘첸츠들 겹치기. */
+  }
+  .nav-2-wrap>.nav-left>.content.active{
+   opacity:1 ;
+   visibility: visible;
+  }
+  .nav-2-wrap>.nav-left>.content>ul>li{
+    margin-left: 40px;
+    font-size: 18px;
+    font-family: "네오";
+    font-weight: bold;
+    margin-bottom: 35px;
+    position: relative;
+    /* 글자밑줄 */
+  }
+  .nav-2-wrap>.nav-left>.content>ul>li>a{
+    position: relative
+    /* a::after의 기준. 밑줄크기  */
+  }
+  .nav-2-wrap>.nav-left>.content>ul>li>a::after{
+    content: "";
+    position: absolute;
+    /* 밑에 글씨 써도 위에 덮힘 */
+    display: block;
+    width: 0%;
+    height: 1px;
+    background-color: black;
+    right:100%;
+    transform:translatex(100%);
+    transition: 0.2s;
+  }
+  .nav-2-wrap>.nav-left>.content>ul>li>a:hover::after{
+    width: 100%;
+  }
+  .nav-2-wrap>.nav-right{
+    width: 100%;
+    margin-left: 381px;
+    height: 100%;
+    z-index: 9999;
+    position: absolute;
+  }
+  /* nav-2-wrap ed */
+  /* left-menu ed */
+
+  /* right-main st */
+  .wrap>.right-main{
+    margin-left: 178px;
+  }
+  /* top-bar st */
+  .wrap>.right-main>.top-bar{
+    width: 100%;
+    background-color:#ffffff;
+      height: 60px;
+      position: fixed;
+      border-bottom: 1px solid #eee;
+      z-index: 9999;
+      top: 0;
+      left: 178px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .wrap>.right-main>.top-bar> .top-title>p{
+      width: 286px;
+      height: 100%;
+      color: #666666;
+      line-height: 60px;
+      font-size: 14px;
+      font-family: "네오";
+      margin-left: 50px;
+  }
+  .wrap>.right-main>.top-bar> .icon-box{
+    margin-left: 40px;
+}
+  .wrap>.right-main>.top-bar> .icon-box>ul>li{
+    margin-right: 20px;
+}  
+ /* top-bar ed */
+
+ /* slide-wrap st */
+ .wrap>.right-main>.slider-wrap{
+   margin-top: 61px;
+   position: relative;
+ }
+ .slider-wrap>.slider-box .content >img{
+   width: 100%;
+}
+.slider-box .content{
+  position: relative;
+}
+.slider-box .content> .txt-box>p.top-txt{
+  position: absolute;
+  top: 103px;
+  left: 55px;
+  font-size: 55px;
+  font-family: "네오";
+  font-weight: bold;
+}
+.slider-box .content> .txt-box>p.mid-txt{
+  position: absolute;
+  top:270px;
+  left: 55px;
+  font-size: 19px;
+  font-family: "네오";
+}
+.slider-box .content>.more-btn{
+  position: absolute;
+  top: 362px;
+  left: 55px;
+  border-radius: 24px;
+  width: 164px;
+  height: 50px;
+  border: 1px solid black; 
+  cursor: pointer;
+  transition: 0.5s;
+}
+.slider-box .content>.more-btn:hover{
+  background-color: black;
+  color: white;
+}
+.slider-box .content>.more-btn>p{
+  font-size: 15px ;
+  font-family: "네오";
+  line-height: 50px;
+  text-align: center;
+}
+.slider-box .content>.more-btn>p>.test{
+  font-size: 12px;
+}
+.slider-wrap>.btn-wrap{
+  height: 40px;
+  bottom: 95px;
+  position: absolute;
+  left: 60px;
+  background-color: yellow;
+}
+.slider-wrap>.btn-wrap>.num-box{
+  height: 100%;
+  font-family: "어그로체";
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.slider-wrap > .btn-wrap > .num-box>li{
+  margin-right: 20px;
+  position: relative;
+}
+.slider-wrap > .btn-wrap > .num-box>li.active{
+  padding-right: 70px;
+}
+.slider-wrap > .btn-wrap > .num-box > li > .bar{
+  content: "";
+  display: inline-block;
+  width:50px ;
+  height: 5px;
+  background-color: #A09A9A;
+  position: absolute;
+  visibility: hidden;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+}
+.slider-wrap > .btn-wrap > .num-box > li.active > .bar{
+  visibility: visible;
+}
+.slider-wrap>.btn-wrap>.num-box>li > .bar::after{
+  content: "";
+  display: block;
+  width: 0%;
+  height: 100%;
+  background-color: red;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.slider-wrap>.btn-wrap>.num-box>li.active > .bar::after{
+  width: 100%;
+  transition: 3s;
+}
+.right-main>.slider-wrap>.btn-wrap>.play-btn>div{
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background-color:pink;
+  line-height: 40px;
+  display: none;
+}
+.right-main>.slider-wrap>.btn-wrap>.play-btn>div.active{
+  display: block;
+}
+.right-main>.slider-wrap>.btn-wrap>.play-btn>div>.btn{
+  font-size: 15px;
+}
+
+.right-main>.slider-wrap>.btn-wrap>.arrow{
+  font-size: 20px;
+  width: 40px;
+  height: 100%;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #666;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+.right-main>.slider-wrap>.btn-wrap>.right-btn{
+  margin-left: 4px;
+}
+.right-main>.slider-wrap>.btn-wrap>.right-btn:hover{
+  background-color: black;
+  color: white;
+}
+.right-main>.slider-wrap>.btn-wrap>.left-btn:hover{
+  background-color: black;
+  color: white;
+}
+
+/* slider-wrap ed */
+
+
+
+ /* seciton01 st */
+.wrap>.right-main>.section01{
+  height: 1007px;
+  position: relative;
+}
+.wrap>.right-main>.section01>h2{
+  margin-top: 106px;
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "어그로체";
+  font-size: 40px;
+}
+.wrap>.right-main>.section01>h2>span{
+color: #E16004;
+}
+
+.wrap>.right-main>.section01>.list{
+  height: 40px;
+  position: absolute;
+  top: 213px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.wrap>.right-main>.section01>.list>p{
+  font-family: "네오";
+  font-size: 20px;
+  margin-right: 35px;
+}
+.wrap>.right-main>.section01>.list>p:hover{
+  color: #E16004;
+}
+.wrap>.right-main>.section01>.rice-box{
+  position: absolute;
+  top:343px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.wrap>.right-main>.section01>.rice-box>.left{
+  bottom: 40px;
+  width: 632px;
+  height: 672px;
+  margin-right: 30px;
+  position: relative;
+}
+.wrap>.right-main>.section01>.rice-box>.left>.img-box>img{
+  width: 65%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+.wrap>.right-main>.section01>.rice-box>.left>.img-box>p{
+  text-align: center;
+}
+.wrap>.right-main>.section01>.rice-box>.left:hover>.img-box::after{
+  content: "쿠첸 121 6인용 IH압력밥솥";
+  font-size: 40px;
+  font-family: "네오";
+  text-align: center;
+  line-height: 830px;
+  color: white;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 5%;
+}
+.wrap>.right-main>.section01>.rice-box>.left>.img-box>p:nth-child(2){
+  font-size: 40px;
+  font-family: "네오";
+}
+.wrap>.right-main>.section01>.rice-box>.left>.img-box>p:nth-child(3){
+  font-size: 32px;
+  font-family: "네오";
+  color:#666666
+}
+.wrap>.right-main>.section01>.rice-box>.right{
+  width: 1008px;
+  height: 662px;
+}
+.section01>.rice-box>.right>.box{
+  width: 300px;
+  height: 314px;
+  padding-bottom: 15px;
+  box-sizing: border-box;
+  position: relative;
+}
+.section01>.rice-box>.right>.box:hover::after{
+  content: "쿠첸 121 6인용 IH압력밥솥";
+  font-size: 20px;
+  font-family: "네오";
+  text-align: center;
+  line-height: 150px;
+  color: white;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 10%;
+}
+
+.section01>.rice-box>.right>.box>p{
+  font-size: 20px;
+  font-family: "네오";
+}
+.section01>.rice-box>.right>.box:nth-child(1){
+ margin-bottom: 30px;
+}
+.section01>.rice-box>.right>.box:nth-child(2){
+  margin-bottom: 30px;
+}
+.section01>.rice-box>.right>.box:nth-child(3){
+  margin-bottom: 30px;
+}
+.section01>.rice-box>.right>.box2{
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.section01>.rice-box>.right>.box5{
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.section01>.rice-box>.right>.box>img{
+  width: 65%;
+  display: block;
+  margin: 0 auto;
+}
+.section01>.rice-box>.right>.box>p{
+  font-size: 20px;
+  text-align: center;
+}
+
+
+/* seciton01 ed */
+ /* section02 st */
+ .wrap>.right-main>.section02{
+  height: 360px;
+  margin-top: 130px;
+  background-color: palevioletred;
+  position: relative;
+ }
+ .wrap>.right-main>.section02>.left{
+   width: 30%;
+   height: 320px;
+   background-color: rebeccapurple;
+   border-bottom-right-radius: 30px;
+   border-top-right-radius: 30px;
+
+   top: 0;
+   background-color: #e16004;
+   position: relative;
+ }
+ .wrap>.right-main>.section02>.left>p{
+  color: white;
+  font-family: "네오";
+  font-size: 32px;
+  text-align: left;
+  margin-left: 30px;
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+ }
+ .wrap>.right-main>.section02>.right{
+  width: 70%;
+  height: 320px;
+  background-color: rebeccapurple;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  position: absolute;
+  top: 40px;
+  left: 30%;
+  background-color: #ddd;
+ }
+ .wrap>.right-main>.section02>.right>p{
+  color:black;
+  font-family: "네오";
+  font-size: 32px;
+  text-align: left;
+  margin-left: 30px;
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+ }
+ /* section02 ed */
+ /* section03 st */
+ .wrap>.right-main>.section03{
+   width: 1680px;
+   height: 366px;
+
+   margin: 0 auto;
+ }
+ /* section03 ed */
+ .wrap>.right-main>.section04{
+ height: 550px;
+ 
+}
+ /* right-main ed */
+ 
+   
+ 

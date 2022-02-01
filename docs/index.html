@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 제이쿼리는 젤 위 -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <!-- 외부 제이쿼리 /웹폰트 /폰트어썸 -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/slick-theme.css">
+    <link rel="stylesheet" href="./css/slick.css">
+    <script src="./js/slick.js"></script>
+
+    <!-- 내가 만든 건 제일 아래에 둔다. -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
+    <!-- 여기 밑에는 아무것도 있으면 안된다. 순서 중요! -->
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="left-menu">
+
+            <div class="logo-box ma-le">
+                <img src="./img/logo.png" alt="logo">
+            </div>
+            <div class="nav-box">
+                <div class="all row ma-le">
+
+                    <div class="ham cell">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    <p class="cell">전체메뉴
+                </div>
+
+                <ul class="goods ma-le">
+                    <li>
+                        <a href="#">밥솥</a>
+                    </li>
+                    <li>
+                        <a href="#">전기레인지</a>
+                    </li>
+                    <li>
+                        <a href="#">주방/생활가전</a>
+                    </li>
+                    <li>
+                        <a href="#">소모품/기타</a>
+                    </li>
+                </ul>
+                <ul class="event ma-le">
+                    <li>
+                        <a href="#">기획전/아울렛</a>
+                    </li>
+                    <li>
+                        <a href="#">이벤트/쿠폰</a>
+                    </li>
+                    <li>
+                        <a href="#">리뷰/공지사항</a>
+                    </li>
+                    <li>
+                        <a href="#">고객센터</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="nav-2-wrap con row">
+            <div class="nav-left cell">
+                <div class="content">
+                    <ul>
+                        <li>
+                            <a href="#">쿠첸 밥솥</a>
+                        </li>
+                        <li>
+                            <a href="#">밭솥 모두보기</a>
+                        </li>
+                        <li>
+                            <a href="#">IR압력밥솥</a>
+                        </li>
+                        <li>
+                            <a href="#">IH압력밥솥</a>
+                        </li>
+                        <li>
+                            <a href="#">압력밥솥</a>
+                        </li>
+                        <li>
+                            <a href="#">무압밥솥</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li>
+                            <a href="#">쿠첸 전기레인지</a>
+                        </li>
+                        <li>
+                            <a href="#">전기레인지 모두보기</a>
+                        </li>
+                        <li>
+                            <a href="#">인덱션 레인지</a>
+                        </li>
+                        <li>
+                            <a href="#">하이브리드 레인지</a>
+                        </li>
+                        <li>
+                            <a href="#">1구 인덱션 레인지</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li>
+                            <a href="#">주방/생활가전 모두보기</a>
+                        </li>
+                        <li>
+                            <a href="#">플렉스쿡</a>
+                        </li>
+                        <li>
+                            <a href="#">포트</a>
+                        </li>
+                        <li>
+                            <a href="#">전자레인지</a>
+                        </li>
+                        <li>
+                            <a href="#">에어프라이어</a>
+                        </li>
+                        <li>
+                            <a href="#">그릴</a>
+                        </li>
+                        <li>
+                            <a href="#">소독기</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li>
+                            <a href="#">소모품/기타 모두보기</a>
+                        </li>
+                        <li>
+                            <a href="#">패킹</a>
+                        </li>
+                        <li>
+                            <a href="#">스탠드케이스</a>
+                        </li>
+                        <li>
+                            <a href="#">기타</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-right cell-r"></div>
+        </div>
+
+
+        <div class="right-main con">
+
+            <div class="top-bar row">
+
+                <div class="top-title cell">
+                    <p>쿠첸과 함께하는 에코라이프 &#129042;</p>
+                </div>
+                <div class="icon-box cell-r">
+                    <ul class="row">
+                        <li class="man cell">
+                            <img src="./img/nav_man.png" alt="">
+                        </li>
+                        <li class="bask cell">
+                            <img src="./img/nav_cart.png" alt="">
+                        </li>
+                        <li class="more cell">
+                            <img src="./img/nav_search.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="slider-wrap">
+                <!-- 감싸기. -->
+                <div class="slider-box">
+
+                    <div class="content">
+                        <img src="./img/20211001101738.jpg" alt="1">
+
+                        <div class="txt-box">
+                            <p class="top-txt">
+                                완벽한 밥이 되는 쿠첸
+                                <br> WELCOME EVENT</br>
+                            </p>
+                            <p class="mid-txt">
+                                신규 회원가입시 추가15%할인 혜택 제공!
+                                <br>WELCOME 10월, 쿠첸의 다양한 제품을 만날 수 있는 기회</br>
+                            </p>
+                        </div>
+
+                        <div class="more-btn">
+                            <p>
+                                자세히 보기 &nbsp
+                                <i class="test fas fa-angle-right"></i>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <img src="./img/20211001102505.jpg" alt="2">
+                        <div class="txt-box">
+                            <p class="top-txt">
+                                이제부터 초고압은 2.1기압
+                                <br> 2.1 초고압이 만드는 완벽한 잡곡밥</br>
+                            </p>
+                            <p class="mid-txt">
+                                잡곡밥은 더 완벽하게, 백미밥은 더 빠르게!
+                                <br>신규회원가입 후 121밭솥 구매시 15%추가할인 제공</br>
+                            </p>
+                        </div>
+
+                        <div class="more-btn">
+                            <p>
+                                자세히 보기 &nbsp
+                                <i class="test fas fa-angle-right"></i>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <img src="./img/20210820124557.jpg" alt="3">
+                        <div class="txt-box">
+                            <p class="top-txt">
+                                주방의 품격을 완성해주는
+                                <br> ALL IH 3구 인덕션 3.0</br>
+                            </p>
+                            <p class="mid-txt">
+                                자체제작 IH발열체 기술로 만든 초고화력
+                                <br>100% 국내 제작 IH코일 10년 무상보증</br>
+                            </p>
+                        </div>
+
+                        <div class="more-btn">
+                            <p>
+                                자세히 보기 &nbsp
+                                <i class="test fas fa-angle-right"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-wrap row">
+                    <ul class="num-box row cell">
+
+                        <li class="cell">01 <div class="bar"></div></li>
+
+                        <li class="cell">02 <div class="bar"></div></li>
+
+                        <li class="cell">03 <div class="bar"></div></li>
+
+                    </ul>
+
+                    <div class="play-btn cell">
+
+                        <div class="play active">
+                            <i class="btn fas fa-play"></i>
+                        </div>
+                        <div class="pause">
+                            <i class="btn fas fa-pause"></i>
+                        </div>
+                    </div>
+
+                    <div class="left-btn arrow cell">
+                        <i class="fas fa-arrow-left"></i>
+                    </div>
+                    <div class="right-btn arrow cell">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section01 con">
+                <h2><span>CU</span>lture of kit<span>CHEN</span></h2>
+
+                <div class="list row">
+                    <p class="cell"> <a href="#">121 잡곡밥솥 </a> </p>
+                    <p class="cell"> <a href="#">으뜸효율가전 </a> </p>
+                    <p class="cell"> <a href="#">저당밥솥 </a> </p>
+                </div>
+
+                <div class="rice-box con row">
+
+                    <div class="left cell">
+                        <div class="img-box">
+                            <img src="./img/20210811194644M.jpg" alt="">
+                            <p>쿠첸 121 6인용 IH압력밥솥</p>
+                            <p>CRT-RPK0670W</p>
+                        </div>
+                    </div>
+
+
+                    <div class="right cell row">
+
+                        <div class="box box1 cell">
+                            <img src="./img/20210811194312M.jpg" alt="">
+                            <p>쿠첸 121 6인용 IH압력밥솥</p>
+                            <p>CRT-RPK0670S</p>
+                        </div>
+
+                        <div class="box box2 cell">
+                            <img src="./img/20210825184850M.jpg" alt="">
+                            <p>쿠첸 121 10인용 IH압력밥솥</p>
+                            <p>CRT-PMP1040KR</p>
+                        </div>
+                        <div class="box box3 cell">
+                            <img src="./img/20210811194644M.jpg" alt="">
+                            <p>쿠첸 121 10인용 IH압력밥솥</p>
+                            <p>CRT-RPK1070W</p>
+                        </div>
+                        <div class="box box4 cell">
+                            <img src="./img/20210825184850M.jpg" alt="">
+                            <p>쿠첸 121 6인용 IH압력밥솥</p>
+                            <p>CRT-PMP0640KR</p>
+                        </div>
+                        <div class="box box5 cell">
+                            <img src="./img/20210810175536M.jpg" alt="">
+                            <p>쿠첸 121 6인용 IH압력밥솥</p>
+                            <p>CRT-PIP0640KR</p>
+                        </div>
+                        <div class="box box6 cell">
+                            <img src="./img/20210812195709M.jpg" alt="">
+                            <p>쿠첸 121 10인용 IH압력밥솥</p>
+                            <p>CRT-PIP1040KR</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="section02 con">
+                    <div class="left">
+                        <p>당신의 <br>
+                        라이프스타일에 맞는 <br>
+                        CUlture of KitCHEN <br>
+                        제품은?</p>
+                    </div>
+                    <div class="right">
+                        
+                        <p>
+                        나는 30대이며, 결혼을 했습니다. <br>
+                        아이가 있으며, 가족구성원은 4명입니다.
+                        </p>
+                        
+                        <div class="search"></div>
+                    </div>
+            </div>
+
+
+            <div class="section03">
+                <div class="slide02"></div>
+            </div>
+
+            <div class="section04">
+                <div class="slide03"></div>
+            </div>
+
+            <div class="section05">
+                <div class="best-menu"></div>
+            </div>
+
+            <div class="section06">
+                <div class="best-review"></div>
+            </div>
+
+            <div class="section07">
+                <div class="benefit"></div>
+            </div>
+            
+            <div class="section08">
+                <div class="slide04"></div>
+            </div>
+
+            <div class="footer-top">
+
+            </div>
+
+            <div class="footer-ed"></div>
+        </div>
+    </div>
+    </div>
+
+
+
+</body>
+
+</html>
