@@ -5,393 +5,278 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- 제이쿼리는 젤 위 -->
-    <script src="./js/jquery-3.6.0.min.js"></script>
-    <!-- 외부 제이쿼리 /웹폰트 /폰트어썸 -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
-        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/slick-theme.css">
-    <link rel="stylesheet" href="./css/slick.css">
-    <script src="./js/slick.js"></script>
+    <title>난다페이지</title>
+    <script src="./js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
 
-    <!-- 내가 만든 건 제일 아래에 둔다. -->
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/script.js"></script>
-    <!-- 여기 밑에는 아무것도 있으면 안된다. 순서 중요! -->
+    <link rel="stylesheet" href="./css/index.css">
+
 </head>
 
 <body>
-    <div class="wrap">
-        <div class="left-menu">
 
-            <div class="logo-box ma-le">
-                <img src="./img/logo.png" alt="logo">
-            </div>
-            <div class="nav-box">
-                <div class="all row ma-le">
+    <section class=" nanda con">
 
-                    <div class="ham cell">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                    </div>
-                    <p class="cell">전체메뉴
-                </div>
-
-                <ul class="goods ma-le">
-                    <li>
-                        <a href="#">밥솥</a>
-                    </li>
-                    <li>
-                        <a href="#">전기레인지</a>
-                    </li>
-                    <li>
-                        <a href="#">주방/생활가전</a>
-                    </li>
-                    <li>
-                        <a href="#">소모품/기타</a>
-                    </li>
-                </ul>
-                <ul class="event ma-le">
-                    <li>
-                        <a href="#">기획전/아울렛</a>
-                    </li>
-                    <li>
-                        <a href="#">이벤트/쿠폰</a>
-                    </li>
-                    <li>
-                        <a href="#">리뷰/공지사항</a>
-                    </li>
-                    <li>
-                        <a href="#">고객센터</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="nav-2-wrap con row">
-            <div class="nav-left cell">
-                <div class="content">
-                    <ul>
-                        <li>
-                            <a href="#">쿠첸 밥솥</a>
-                        </li>
-                        <li>
-                            <a href="#">밭솥 모두보기</a>
-                        </li>
-                        <li>
-                            <a href="#">IR압력밥솥</a>
-                        </li>
-                        <li>
-                            <a href="#">IH압력밥솥</a>
-                        </li>
-                        <li>
-                            <a href="#">압력밥솥</a>
-                        </li>
-                        <li>
-                            <a href="#">무압밥솥</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="content">
-                    <ul>
-                        <li>
-                            <a href="#">쿠첸 전기레인지</a>
-                        </li>
-                        <li>
-                            <a href="#">전기레인지 모두보기</a>
-                        </li>
-                        <li>
-                            <a href="#">인덱션 레인지</a>
-                        </li>
-                        <li>
-                            <a href="#">하이브리드 레인지</a>
-                        </li>
-                        <li>
-                            <a href="#">1구 인덱션 레인지</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="content">
-                    <ul>
-                        <li>
-                            <a href="#">주방/생활가전 모두보기</a>
-                        </li>
-                        <li>
-                            <a href="#">플렉스쿡</a>
-                        </li>
-                        <li>
-                            <a href="#">포트</a>
-                        </li>
-                        <li>
-                            <a href="#">전자레인지</a>
-                        </li>
-                        <li>
-                            <a href="#">에어프라이어</a>
-                        </li>
-                        <li>
-                            <a href="#">그릴</a>
-                        </li>
-                        <li>
-                            <a href="#">소독기</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="content">
-                    <ul>
-                        <li>
-                            <a href="#">소모품/기타 모두보기</a>
-                        </li>
-                        <li>
-                            <a href="#">패킹</a>
-                        </li>
-                        <li>
-                            <a href="#">스탠드케이스</a>
-                        </li>
-                        <li>
-                            <a href="#">기타</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="nav-right cell-r"></div>
-        </div>
-
-
-        <div class="right-main con">
-
-            <div class="top-bar row">
-
-                <div class="top-title cell">
-                    <p>쿠첸과 함께하는 에코라이프 &#129042;</p>
-                </div>
-                <div class="icon-box cell-r">
-                    <ul class="row">
-                        <li class="man cell">
-                            <img src="./img/nav_man.png" alt="">
-                        </li>
-                        <li class="bask cell">
-                            <img src="./img/nav_cart.png" alt="">
-                        </li>
-                        <li class="more cell">
-                            <img src="./img/nav_search.png" alt="">
-                        </li>
-                    </ul>
-                </div>
+        <!-----visual----->
+        <section class="visual">
+            <div class="relative mockup-2_r">
+                <span class="absolute wow mockup-2 fadeInUpBig" data-wow-delay="0.5s"><img class="pt-5"
+                        src="https://cdn.jsdelivr.net/gh/chaeryeong1/nanda/목업1.png" alt=""></span>
             </div>
 
-            <div class="slider-wrap">
-                <!-- 감싸기. -->
-                <div class="slider-box">
+            <div class="visual_box">
+                <div class="icon">
+                    <span class="icon absolute"><img src="https://cdn.jsdelivr.net/gh/chaeryeong1/nanda/난다아이콘.png"
+                            alt=""></span>
+                </div>
+                <div class="box-1 flex">
 
-                    <div class="content">
-                        <img src="./img/20211001101738.jpg" alt="1">
+                    <div class="mockup flex">
+                        <div class="w-362"></div>
+                        <span class="wow mockup-1 pr-10">
+                            <img class="wow" src="https://cdn.jsdelivr.net/gh/chaeryeong1/nanda/Group 396.png" alt=""
+                                data-wow-delay="1s">
 
-                        <div class="txt-box">
-                            <p class="top-txt">
-                                완벽한 밥이 되는 쿠첸
-                                <br> WELCOME EVENT</br>
-                            </p>
-                            <p class="mid-txt">
-                                신규 회원가입시 추가15%할인 혜택 제공!
-                                <br>WELCOME 10월, 쿠첸의 다양한 제품을 만날 수 있는 기회</br>
-                            </p>
-                        </div>
+                        </span>
+                        <div class="w-460"></div>
+                        <span class="wow mockup-3 absolute pl-10"><img
+                                src="https://cdn.jsdelivr.net/gh/chaeryeong1/nanda/Group 398.png" alt=""></span>
 
-                        <div class="more-btn">
-                            <p>
-                                자세히 보기 &nbsp
-                                <i class="test fas fa-angle-right"></i>
-                            </p>
-                        </div>
                     </div>
 
-                    <div class="content">
-                        <img src="./img/20211001102505.jpg" alt="2">
-                        <div class="txt-box">
-                            <p class="top-txt">
-                                이제부터 초고압은 2.1기압
-                                <br> 2.1 초고압이 만드는 완벽한 잡곡밥</br>
-                            </p>
-                            <p class="mid-txt">
-                                잡곡밥은 더 완벽하게, 백미밥은 더 빠르게!
-                                <br>신규회원가입 후 121밭솥 구매시 15%추가할인 제공</br>
-                            </p>
-                        </div>
-
-                        <div class="more-btn">
-                            <p>
-                                자세히 보기 &nbsp
-                                <i class="test fas fa-angle-right"></i>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="content">
-                        <img src="./img/20210820124557.jpg" alt="3">
-                        <div class="txt-box">
-                            <p class="top-txt">
-                                주방의 품격을 완성해주는
-                                <br> ALL IH 3구 인덕션 3.0</br>
-                            </p>
-                            <p class="mid-txt">
-                                자체제작 IH발열체 기술로 만든 초고화력
-                                <br>100% 국내 제작 IH코일 10년 무상보증</br>
-                            </p>
-                        </div>
-
-                        <div class="more-btn">
-                            <p>
-                                자세히 보기 &nbsp
-                                <i class="test fas fa-angle-right"></i>
-                            </p>
-                        </div>
-                    </div>
                 </div>
 
-                <div class="btn-wrap row">
-                    <ul class="num-box row cell">
+            </div>
+            <span><img src="https://cdn.jsdelivr.net/gh/chaeryeong1/nanda/d2d2d2.png" alt=""></span>
+        </section>
 
-                        <li class="cell">01 <div class="bar"></div></li>
+        <!-----난다 설명----->
+        <section class="Introduction ">
+            <div class="Introduction_box-1">
 
-                        <li class="cell">02 <div class="bar"></div></li>
+                <div class="flex justify-center items-center flex-col">
+                    <div class="h_145"></div>
+                    <span class="pb-2 wow fadeInDownBig" data-wow-delay="0.3s"><img
+                            src="https://cdn.jsdelivr.net/gh/chaeryeong1/nanda/2조 다이어트 식단 어플 (4)/Group 409.png"
+                            alt=""></span>
 
-                        <li class="cell">03 <div class="bar"></div></li>
-
-                    </ul>
-
-                    <div class="play-btn cell">
-
-                        <div class="play active">
-                            <i class="btn fas fa-play"></i>
-                        </div>
-                        <div class="pause">
-                            <i class="btn fas fa-pause"></i>
-                        </div>
-                    </div>
-
-                    <div class="left-btn arrow cell">
-                        <i class="fas fa-arrow-left"></i>
-                    </div>
-                    <div class="right-btn arrow cell">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
+                </div>
+                <div class="flex justify-center relative">
+                    <span class="wow absolute n_logo_"><img
+                            src="https://cdn.jsdelivr.net/gh/chaeryeong1/nanda/2조 다이어트 식단 어플 (4)/난다로고 n.png"
+                            alt=""></span>
+                    <div class="w-158"></div>
+                    <span><img src="https://cdn.jsdelivr.net/gh/chaeryeong1/nanda/2조 다이어트 식단 어플 (4)/난다로고 anda.png"
+                            alt=""></span>
+                    <span class="wow one_1 fadeInTopLeft absolute" data-wow-delay="0.2s"><img
+                            src="https://cdn.jsdelivr.net/gh/chaeryeong1/nanda/2조 다이어트 식단 어플 (4)/Group 408.png"
+                            alt=""></span>
+                    <span class="wow fadeInTopRight one_3 absolute" data-wow-delay="0.4s"><img
+                            src="https://cdn.jsdelivr.net/gh/chaeryeong1/nanda/2조 다이어트 식단 어플 (4)/Group 407.png"
+                            alt=""></span>
+                </div>
+                <div class="Introduction_box-2 flex justify-center items-center flex-col relat  relative">
+                    <div class="h-50"></div>
+                    <span class="wow zoomIn pt-10 Introduction_box-2_bg_img" data-wow-delay="1.3s"><img
+                            src="https://cdn.jsdelivr.net/gh/chaeryeong1/nanda/2조 다이어트 식단 어플 (4)/Rectangle 260.png"
+                            alt=""></span>
+                    <span class="wow fadeInRight absolute pb-10" data-wow-delay="1.5s">
+                        <img src="https://cdn.jsdelivr.net/gh/chaeryeong1/nanda/2조 다이어트 식단 어플 (4)/Group 369.png" alt="">
+                    </span>
+                    <div class="h-5"></div>
+                    <span class="wow fadeInRight ss_2 absolute pt-10 mt-10" data-wow-delay="2s">
+                        <img class="pt-10 mt-10"
+                            src="https://cdn.jsdelivr.net/gh/chaeryeong1/nanda/2조 다이어트 식단 어플 (4)/또한, 다이어트를 하는 사용자들이 매일매일 작성 할 수 있도록 다가가기 쉬우면서 깔끔하고 아기자기한 요소들이 친숙한 분위기를 경험 할 수 있도록 제작 했습니다..png"
+                            alt="">
+                    </span>
+                    <span class="one_2 wow fadeIn absolute"><img
+                            src="https://cdn.jsdelivr.net/gh/chaeryeong1/nanda/2조 다이어트 식단 어플 (4)/Ellipse 108.png"
+                            alt=""></span>
                 </div>
             </div>
+        </section>
+        <!-----Persona----->
+        <section class="Persona">
+            <div class="Persona-bg"></div>
+            <img class="Persona-card wow fadeInUp"
+                src="https://raw.githubusercontent.com/seoungmohwa/nanda/main/nanda/Group%20385.png" alt="페르소나 카드">
+        </section>
 
-            <div class="section01 con">
-                <h2><span>CU</span>lture of kit<span>CHEN</span></h2>
+        <!-----Brand----->
+        <section class="Brand">
+            <div class="Brand-bg"></div>
+            <!---Brand Identity--->
+            <img class="Identity-card wow fadeInUp" data-wow-delay="0.2s"
+                src="https://raw.githubusercontent.com/seoungmohwa/nanda/main/nanda/Group%20389.png" alt="로고소개">
+            <!---color--->
+            <img class="color-card wow fadeInUp" data-wow-delay="0.2s"
+                src="https://raw.githubusercontent.com/seoungmohwa/nanda/main/nanda/Group%20390.png" alt="컬러소개">
+            <!---Typography--->
+            <img class="Typography-card wow fadeInUp" data-wow-delay="0.4s"
+                src="https://raw.githubusercontent.com/seoungmohwa/nanda/main/nanda/Group%20391.png" alt="타이포소개">
+        </section>
 
-                <div class="list row">
-                    <p class="cell"> <a href="#">121 잡곡밥솥 </a> </p>
-                    <p class="cell"> <a href="#">으뜸효율가전 </a> </p>
-                    <p class="cell"> <a href="#">저당밥솥 </a> </p>
-                </div>
+        <!-----Character&Chart----->
+        <section class="Character_Chart">
+            <div class="Chart_bg"></div>
+            <!------Character----->
+            <img class="Character-card wow fadeInUp"
+                src="https://raw.githubusercontent.com/seoungmohwa/nanda/main/nanda/Group%20399.png" alt="캐릭터">
+        </section>
 
-                <div class="rice-box con row">
+        <!-----wire-frame----->
+        <section class="con-1 wire-frame-menu pb-20">
+            <div class="title">
+                <img src="https://cdn.jsdelivr.net/gh/choieunmi/nanda/Wire Franing.png" alt="">
+            </div>
+            <div class="img-list infinite_animation cell flex mt-20">
 
-                    <div class="left cell">
-                        <div class="img-box">
-                            <img src="./img/20210811194644M.jpg" alt="">
-                            <p>쿠첸 121 6인용 IH압력밥솥</p>
-                            <p>CRT-RPK0670W</p>
-                        </div>
+                <img class="mr-14" src="https://cdn.jsdelivr.net/gh/choieunmi/nanda/frame/fram01.png" alt="">
+
+                <img src="https://cdn.jsdelivr.net/gh/choieunmi/nanda/frame/fram02.png" alt="">
+        </section>
+        <!-----info&정보입력----->
+        <section class="info">
+            <div class="info-bg"></div>
+        </section>
+        <section class="info-main">
+            <div class="info-main-bg"></div>
+            <img class="info-main-card-01 wow fadeInUp Brand-card"
+                src="https://raw.githubusercontent.com/seoungmohwa/nanda/main/nanda/Group%20400.png" alt="첫번째">
+            <img class="info-main-card-02 wow fadeInUp Brand-card"
+                src="https://raw.githubusercontent.com/seoungmohwa/nanda/main/nanda/Group%20401.png" alt="두번째">
+
+        </section>
+
+        <!-----홈화면----->
+        <section class="home-menu con">
+
+            <div class="home-menu__bg">
+                <img src="https://cdn.jsdelivr.net/gh//choieunmi/nanda/홈화면bg.png" alt="">
+            </div>
+
+            <div class="main_menu flex">
+
+                <div class="main_menu__vertical_video">
+                    <div class="fram">
+                        <img src="https://cdn.jsdelivr.net/gh//choieunmi/nanda/frame/세로스크롤.png" alt="">
                     </div>
 
+                    <div class="video">
+                        <video loop autoplay muted
+                            src="https://user-images.githubusercontent.com/94097695/152305838-3dcc4388-507b-4dcf-8790-5b6196ce5498.mp4"></video>
 
-                    <div class="right cell row">
+                    </div>
+                </div>
 
-                        <div class="box box1 cell">
-                            <img src="./img/20210811194312M.jpg" alt="">
-                            <p>쿠첸 121 6인용 IH압력밥솥</p>
-                            <p>CRT-RPK0670S</p>
-                        </div>
+                <div class="main_menu__horizontal_video">
+                    <div class="fram">
+                        <img src="https://cdn.jsdelivr.net/gh//choieunmi/nanda/frame/가로스크롤.png" alt="">
+                    </div>
+                    <div class="video">
+                        <video loop muted autoplay
+                            src="https://user-images.githubusercontent.com/94097695/152310991-230c794e-8720-43c5-a0cf-f6e3f9d49a21.mp4"></video>
+                    </div>
 
-                        <div class="box box2 cell">
-                            <img src="./img/20210825184850M.jpg" alt="">
-                            <p>쿠첸 121 10인용 IH압력밥솥</p>
-                            <p>CRT-PMP1040KR</p>
-                        </div>
-                        <div class="box box3 cell">
-                            <img src="./img/20210811194644M.jpg" alt="">
-                            <p>쿠첸 121 10인용 IH압력밥솥</p>
-                            <p>CRT-RPK1070W</p>
-                        </div>
-                        <div class="box box4 cell">
-                            <img src="./img/20210825184850M.jpg" alt="">
-                            <p>쿠첸 121 6인용 IH압력밥솥</p>
-                            <p>CRT-PMP0640KR</p>
-                        </div>
-                        <div class="box box5 cell">
-                            <img src="./img/20210810175536M.jpg" alt="">
-                            <p>쿠첸 121 6인용 IH압력밥솥</p>
-                            <p>CRT-PIP0640KR</p>
-                        </div>
-                        <div class="box box6 cell">
-                            <img src="./img/20210812195709M.jpg" alt="">
-                            <p>쿠첸 121 10인용 IH압력밥솥</p>
-                            <p>CRT-PIP1040KR</p>
-                        </div>
+                </div>
 
+            </div>
+
+            <!-- my menu -->
+            <div class="my_menu_box frame-con ">
+                <video class="my-menu-video" autoplay muted loop
+                    src="https://user-images.githubusercontent.com/94097695/151120233-c12cead7-9753-4569-9dba-6d04beb9883c.mp4"></video>
+                <img class="frame"
+                    src="https://raw.githubusercontent.com/seoungmohwa/nanda/main/nanda/Rectangle4%203.png" alt="목업이미지">
+            </div>
+
+            <!-- 환경설정 -->
+            <div class="setting_box frame-con ">
+                <video class="my-menu-video" autoplay muted loop
+                    src="https://user-images.githubusercontent.com/94097695/151120237-757f3fd5-3b9b-438c-81c3-0559636974da.mp4"></video>
+                <img class="frame"
+                    src="https://raw.githubusercontent.com/seoungmohwa/nanda/main/nanda/Rectangle4%203.png" alt="목업이미지">
+            </div>
+
+            <div class="home-menu__weight_record">
+                <img src="https://cdn.jsdelivr.net/gh//choieunmi/nanda/체중기록.png" alt="">
+            </div>
+
+            <div class="home-menu__month_all">
+                <img src="https://cdn.jsdelivr.net/gh//choieunmi/nanda/한달모아보기.png" alt="">
+            </div>
+
+        </section>
+
+        <!-----오늘의일기----->
+        <section class="diary pt-10 pb-10">
+            <div class="mokup flex w-full ">
+
+                <div class="mokup-l mokup-2  mx-auto">
+                    <img src="https://cdn.jsdelivr.net/gh//choieunmi/nanda/frame/pone_fram.png" alt="">
+
+                    <video autoplay muted loop
+                        src="https://user-images.githubusercontent.com/94097695/150942815-57671fa9-58b3-4519-8599-9d8e608e979d.mp4"></video>
+                </div>
+
+                <div class="mokup-2 mokup-r ">
+
+                    <img src="https://cdn.jsdelivr.net/gh//choieunmi/nanda/frame/pone_fram.png" alt="">
+
+                    <video autoplay muted loop
+                        src="https://user-images.githubusercontent.com/94097695/150943184-b3eb37e5-c074-4df8-a9f6-ad4fd49db2b2.mp4"></video>
+
+                </div>
+            </div>
+            <div class="bg-img">
+                <img src="https://cdn.jsdelivr.net/gh//choieunmi/nanda/일기bg.png" alt="">
+            </div>
+        </section>
+
+        <!-----알람기능----->
+        <section class="notice">
+
+            <div class="title mt-8">
+                <img class="mx-auto " src="https://cdn.jsdelivr.net/gh//choieunmi/nanda/notice_menu/Group 315.png"
+                    alt="">
+            </div>
+
+            <div class="notice-menu flex justify-center">
+
+                <div class="notice-video mx-auto">
+
+                    <div class="frame">
+                        <img src="https://cdn.jsdelivr.net/gh//choieunmi/nanda/ipone/아이폰 목업 파일.png" alt="">
+                    </div>
+
+                    <div class="video">
+                        <video class="w-full h-full" loop autoplay muted src="https://user-images.githubusercontent.com/94097695/150935682-cf0d4c12-5ff4-4e2c-8001-b53a183badd5.mp4
+"></video>
                     </div>
                 </div>
 
             </div>
 
-            <div class="section02 con">
-                    <div class="left">
-                        <p>당신의 <br>
-                        라이프스타일에 맞는 <br>
-                        CUlture of KitCHEN <br>
-                        제품은?</p>
-                    </div>
-                    <div class="right">
-                        
-                        <p>
-                        나는 30대이며, 결혼을 했습니다. <br>
-                        아이가 있으며, 가족구성원은 4명입니다.
-                        </p>
-                        
-                        <div class="search"></div>
-                    </div>
+        </section>
+
+        <!-----마지막----->
+        <section class="finally_page pb-28 mt-12">
+            <div class="finally_bg"></div>
+            <span class="finally_page_main-img pt-10 wow">
+                <img src="https://cdn.jsdelivr.net/gh/chaeryeong1/nanda/Group 211.png" alt="">
+            </span>
+            <div class="icon_img">
+                <img class="infinite_animation mx-auto mt-20 pb-4"
+                    src="https://cdn.jsdelivr.net/gh//choieunmi/nanda/finally_page/icon.png" alt="">
             </div>
-
-
-            <div class="section03">
-                <div class="slide02"></div>
-            </div>
-
-            <div class="section04">
-                <div class="slide03"></div>
-            </div>
-
-            <div class="section05">
-                <div class="best-menu"></div>
-            </div>
-
-            <div class="section06">
-                <div class="best-review"></div>
-            </div>
-
-            <div class="section07">
-                <div class="benefit"></div>
-            </div>
-            
-            <div class="section08">
-                <div class="slide04"></div>
-            </div>
-
-            <div class="footer-top">
-
-            </div>
-
-            <div class="footer-ed"></div>
-        </div>
-    </div>
-    </div>
-
-
+            <img class="mx-auto "
+                src="https://cdn.jsdelivr.net/gh//choieunmi/nanda/finally_page/Thank U For Watch =].png" alt="">
+        </section>
+    </section>
 
 </body>
 
